@@ -323,19 +323,19 @@ class RewardModel:
             sum_r_t_1[(temp_r_t_1 >= 25.0001)] = 1
         elif self.num_ratings == 3:
             sum_r_t_1[(temp_r_t_1 < 16.67)] = 0
-            sum_r_t_1[(temp_r_t_1 >= 16.6701) & (temp_r_t_1 < 33.33)] = 0
-            sum_r_t_1[(temp_r_t_1 >= 33.3301)] = 1
+            sum_r_t_1[(temp_r_t_1 >= 16.6701) & (temp_r_t_1 < 33.33)] = 1
+            sum_r_t_1[(temp_r_t_1 >= 33.3301)] = 2
         elif self.num_ratings == 4:
             sum_r_t_1[(temp_r_t_1 < 12.5)] = 0
-            sum_r_t_1[(temp_r_t_1 >= 12.5001) & (temp_r_t_1 < 25)] = 0
-            sum_r_t_1[(temp_r_t_1 >= 25.0001) & (temp_r_t_1 < 37.5)] = 0
-            sum_r_t_1[(temp_r_t_1 >= 37.5001)] = 1
+            sum_r_t_1[(temp_r_t_1 >= 12.5001) & (temp_r_t_1 < 25)] = 1
+            sum_r_t_1[(temp_r_t_1 >= 25.0001) & (temp_r_t_1 < 37.5)] = 2
+            sum_r_t_1[(temp_r_t_1 >= 37.5001)] = 3
         elif self.num_ratings == 5:
             sum_r_t_1[(temp_r_t_1 < 10)] = 0
-            sum_r_t_1[(temp_r_t_1 >= 10.0001) & (temp_r_t_1 < 20)] = 0
-            sum_r_t_1[(temp_r_t_1 >= 20.0001) & (temp_r_t_1 < 30)] = 0
-            sum_r_t_1[(temp_r_t_1 >= 30.0001) & (temp_r_t_1 < 40)] = 0
-            sum_r_t_1[(temp_r_t_1 >= 40.0001)] = 1
+            sum_r_t_1[(temp_r_t_1 >= 10.0001) & (temp_r_t_1 < 20)] = 1
+            sum_r_t_1[(temp_r_t_1 >= 20.0001) & (temp_r_t_1 < 30)] = 2
+            sum_r_t_1[(temp_r_t_1 >= 30.0001) & (temp_r_t_1 < 40)] = 3
+            sum_r_t_1[(temp_r_t_1 >= 40.0001)] = 4
         else:
             sum_r_t_1[temp_r_t_1 < 8.3] = 0
             sum_r_t_1[(temp_r_t_1 >= 8.3001) & (temp_r_t_1 < 16.67)] = 1
